@@ -1,0 +1,181 @@
+.edit-image {
+    position: absolute;
+    width: 100%;
+    margin: 17px 0 0 0;
+    background: #fff;
+    transition: opacity 0.5s ease-out;
+    opacity: 0;
+    z-index: 0;
+}
+
+.chain__item--template::before {
+    content: "";
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: -1px;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+}
+.chain__item--template::after {
+    content: "حدد آخر";
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 42px;
+    font: 16px "TheMixArab-Regular", sans-serif;
+    color: #fff;
+}
+
+.chain:hover .chain__item--template::before,
+.chain:hover .chain__item--template::after {
+    display: block;
+    cursor: pointer;
+}
+
+.edit-image__text {
+    text-align: center;
+}
+
+
+
+
+
+
+.editor-title::after {
+    content: "";
+    position: absolute;
+    top: 23px;
+    left: 15px;
+    right: 430px;
+    border-top: 1px solid #b7b7b7;
+}
+
+.submit-title::after {
+    content: "";
+    position: absolute;
+    top: 23px;
+    left: 15px;
+    right: 415px;
+    border-top: 1px solid #b7b7b7;
+}
+
+.editor-title::before {
+    content: "";
+    position: absolute;
+    top: 23px;
+    right: 15px;
+    left: 430px;
+    border-top: 1px solid #b7b7b7;
+}
+
+.submit-title::before {
+    content: "";
+    position: absolute;
+    top: 23px;
+    right: 15px;
+    left: 415px;
+    border-top: 1px solid #b7b7b7;
+}
+
+.canvas-text {
+    display: block;
+    height: 0;
+    margin: 0 auto;
+}
+
+.canvas-picture {
+    display: block;
+    height: 0;
+    margin: 0 auto;
+    opacity: 0;
+}
+
+
+
+.chain {}
+.chain__item {
+    position: relative;
+    display: inline-block;
+}
+
+.chain__item:first-child {
+    margin: 0 0 0 78px;
+}
+
+.chain__item img {
+    width: 100%;
+    height: 100%;
+}
+.chain__item--pic {
+    width: 126px;
+    height: 102px;
+    margin: 0 0 31px;
+    padding: 5px;
+    border: 1px solid #d6d6d6;
+    -webkit-box-shadow: 0px 19px 16px -17px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 19px 16px -17px rgba(0,0,0,0.5);
+    -ms-box-shadow: 0px 19px 16px -17px rgba(0,0,0,0.5);
+    -o-box-shadow: 0px 19px 16px -17px rgba(0,0,0,0.5);
+    box-shadow: 0px 19px 16px -17px rgba(0,0,0,0.5);
+}
+.chain__item--symbol {
+    margin: 15px 13px 0;
+    font-size: 85px;
+    vertical-align: top;
+    color: #a7a7a7;
+}
+
+.button {
+    display: inline-block;
+    padding: 8px 19px 5px;
+    font: 16px "TheMixArab-Regular", sans-serif;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #1381ca;
+    border-radius: 3px;
+}
+
+.button--change {
+    float: left;
+    margin: 68px 0 0 75px;
+    background: #fefcea; /* Для старых браузров */
+    background: linear-gradient(to right, #0878c2, #49acf1);
+}
+
+.button--link {
+    position: relative;
+    margin: 27px 35px 43px 15px;
+    padding: 8px 19px 5px 44px;
+    background: #fefcea; /* Для старых браузров */
+    background: linear-gradient(to top, #0878c2, #49acf1);
+}
+
+.button--link::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 6px;
+    width: 23px;
+    height: 19px;
+    background: url(../img/sprites.png);
+}
+
+.button--send::after {
+    content: "";
+    left: 6px;
+    top: 6px;
+    width: 32px;
+    height: 17px;
+    background-position: 0px -17px;
+}
+
+.button--save::after {
+    content: "";
+    left: 16px;
+    top: 8px;
+    width: 32px;
+    height: 16px;
+    background-position: 0px -33px;
+}

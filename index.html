@@ -14,49 +14,87 @@
 </head>
 <body>
 
-	<div class="welcome">
-		يود الموقع الوصول الى محتوى الصور
-	</div>
+
+	<!-- Shadow layout -->
 	<div class="shadow"></div>
 
+
+	<!-- Pop-up 'Welcome' -->
+	<div class="popup popup--welcome">يود الموقع الوصول الى محتوى الصور</div>
+
+
+	<!-- Pop-up save -->
+	<div class="popup popup--confirm">
+		الموافقة
+		<a class="popup__link popup__link--yes" href="#" title="#"></a>
+		<a class="popup__link popup__link--no" href="#" title="#"></a>
+	</div>
+
+
+	<!-- Content -->
 	<div class="content">
-		<a class="hashtag" href="https://www.google.ae/webhp?hl=ru&sa=X&ved=0ahUKEwibhp6w7dPSAhUDOCYKHZxJBUoQPAgD#hl=ru&q=hashtag&*" title="#photo_editor"><img src="img/hashtag.png" alt="#photo_editor"></a>
+
+
+		<!-- Header -->
+		<a class="hashtag" href="/" title="#photo_editor"><img src="img/hashtag.png" alt="#photo_editor"></a>
 		<a class="logo" href="/" title="#photo_editor"><img src="img/logo.png" alt="#photo_editor"></a>
 
+
+		<!-- Screen #1 'List-image' -->
 		<div class="list-image">
 			<h1>اختار صورتك</h1>
 			<div class="items">
-				<div class="item"><img src="img/paper/1-small.jpg" alt="example-1"></div>
-				<div class="item"><img src="img/paper/2-small.jpg" alt="example-2"></div>
-				<div class="item"><img src="img/paper/3-small.jpg" alt="example-3"></div>
-				<div class="item"><img src="img/paper/4-small.jpg" alt="example-4"></div>
-				<div class="item"><img src="img/paper/5-small.jpg" alt="example-5"></div>
-				<div class="item"><img src="img/paper/6-small.jpg" alt="example-6"></div>
-				<div class="item"><img src="img/paper/7-small.jpg" alt="example-7"></div>
-				<div class="item"><img src="img/paper/8-small.jpg" alt="example-8"></div>
-				<div class="item"><img src="img/paper/9-small.jpg" alt="example-9"></div>
+				<div class="item" data-num="0"><img src="img/paper/0-small.jpg" alt="example-0"></div>
+				<div class="item" data-num="1"><img src="img/paper/1-small.jpg" alt="example-1"></div>
+				<div class="item" data-num="2"><img src="img/paper/2-small.jpg" alt="example-2"></div>
+				<div class="item" data-num="3"><img src="img/paper/3-small.jpg" alt="example-3"></div>
+				<div class="item" data-num="4"><img src="img/paper/4-small.jpg" alt="example-4"></div>
+				<div class="item" data-num="5"><img src="img/paper/5-small.jpg" alt="example-5"></div>
+				<div class="item" data-num="6"><img src="img/paper/6-small.jpg" alt="example-6"></div>
+				<div class="item" data-num="7"><img src="img/paper/7-small.jpg" alt="example-7"></div>
+				<div class="item" data-num="8"><img src="img/paper/8-small.jpg" alt="example-8"></div>
 			</div>
 		</div>
 
+
+		<!-- Screen #2 'Add text' -->
 		<div class="edit-image">
 			<h1>عبرلها بكل اللي في قلبك</h1>
-			<p>
+			<p class="edit-image__text">
 				هذا النص للعرض فقط هذا النص للعرض فقط هذا النص للعرض فقط هذا النص للعرض فقط هذا النص للعرض فقط
 				هذا النص للعرض فقط هذا النص للعرض فقط هذا النص للعرض فقط هذا النص للعرض فقط هذا النص للعرض فقط
 				هذا النص للعرض فقط هذا النص للعرض فقط هذا النص للعرض فقط
 			</p>
-			<canvas class="canvas-text" id="text"></canvas>
+			<div class="preview"></div>
 			<div class="chain">
 				<div class="chain__item chain__item--pic"><img src="img/wood-small.jpg" alt=""></div>
 				<div class="chain__item chain__item--symbol">+</div>
-				<div class="chain__item chain__item--pic"><img src="img/paper/1-small.jpg" alt=""></div>
+				<div class="chain__item chain__item--pic chain__item--template"><img src="img/paper/1-small.jpg" alt=""></div>
 				<div class="chain__item chain__item--symbol">=</div>
 				<div class="chain__item chain__item--pic"><img src="img/paper/2-small.jpg" alt=""></div>
 			</div>
 			<form>
 				<h2 class="editor-title">قم بكتابة النص</h2>
 				<a class="button button--change" href="#">تثبيت</a>
-				<textarea id="inputText"></textarea>
+				<div class="format-text">
+					<label for="font-size">Font-size:</label>
+					<select id="font-size">
+						<option value="12">12px</option>
+						<option value="16">16px</option>
+						<option value="20">20px</option>
+					</select>
+					
+					<label for="color">Color:</label>
+					<select id="color">
+						<option value="#2e3192">blue</option>
+						<option value="#000">black</option>
+						<option value="#ff0000">red</option>
+						<option value="#0f0">green</option>
+					</select>
+					<textarea id="inputText" title="Input Text">
+هذا النص للعرض فقط هذا النص للعرض فقط هذا النص للعرض فقط هذا النص للعرض فقط هذا النص للعرض فقط هذا النص للعرض فقط هذا النص للعرض فقط هذا النص للعرض فقط هذا النص للعرض فقط هذا النص للعرض فقط هذا النص للعرض فقط هذا النص للعرض فقط هذا النص للعرض فقط
+					</textarea>
+				</div>
 				<h2 class="submit-title">تفاعل اكثر</h2>
 				<a class="button button--link button--talk" href="#">ناقش هذه الحملة</a>
 				<a class="button button--link button--send" href="#">ارسل رسالة</a>

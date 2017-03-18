@@ -1,0 +1,63 @@
+.popup {
+    position: absolute;
+    margin: -100px 0 0 -238px;
+    font: 26px "TheMixArab-Regular", sans-serif;
+    text-align: center;
+    border-radius: 5px;
+    background: #fff;
+    color: #000;
+    transition: opacity 0.5s ease-out;
+    z-index: 3;
+}
+
+.popup--welcome {
+    top: 35%;
+    left: 50%;
+    width: 476px;
+    padding: 89px 0 85px;
+    opacity: 1;
+}
+
+.popup--confirm {
+    display: none;
+    top: 35%;
+    left: 50%;
+    width: 476px;
+    padding: 70px 0 106px;
+    opacity: 0;
+}
+
+.popup__link::after,
+.popup__link::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+}
+
+.popup__link--yes::after {
+    top: 106px;
+    left: 146px;
+    width: 12px;
+    height: 45px;
+    transform: rotate(45deg);
+    border-right: 5px solid #39b549;
+    border-bottom: 5px solid #39b549;
+}
+
+.popup__link--no::before {
+    top: 133px;
+    right: 125px;
+    width: 57px;
+    height: 45px;
+    transform: rotate(-45deg);
+    border-right: 5px solid #ff0000;
+}
+
+.popup__link--no::after {
+    top: 93px;
+    right: 125px;
+    width: 57px;
+    height: 45px;
+    transform: rotate(45deg);
+    border-right: 5px solid #ff0000;
+}
